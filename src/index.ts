@@ -1,2 +1,2 @@
-export { Temperature } from './temperature'
-export { Pressure } from './pressure'
+export { Temperature, TemperatureUnits } from './temperature'
+export { Pressure, PressureUnits } from './pressure'
