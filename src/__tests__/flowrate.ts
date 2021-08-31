@@ -4,7 +4,7 @@ describe('flowrate', () => {
   it('should create a flowrate from MTPA', () => {
     const flowrate = new Flowrate(1, FlowrateUnits.MTPA)
 
-    expect(flowrate.kgps).toBeCloseTo(0.316880878)
+    expect(flowrate.kgps).toBeCloseTo(31.6880878)
     expect(flowrate.MTPA).toBe(1)
   })
 
@@ -12,6 +12,6 @@ describe('flowrate', () => {
     const flowrate = new Flowrate(1, FlowrateUnits.Kgps)
 
     expect(flowrate.kgps).toBe(1)
-    expect(flowrate.MTPA).toBeCloseTo(3.15576)
+    expect(flowrate.MTPA).toBeCloseTo(0.0315576)
   })
 })

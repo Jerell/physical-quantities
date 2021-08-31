@@ -6,7 +6,7 @@ export class Flowrate {
         this._kgps = q
         break
       case FlowrateUnits.MTPA:
-        const factor = 3.15576
+        const factor = 0.0315576
         this._kgps = q / factor
         break
       default:
@@ -19,7 +19,7 @@ export class Flowrate {
   }
 
   get MTPA() {
-    const factor = 3.15576
+    const factor = 0.0315576
     return this._kgps * factor
   }
 }
