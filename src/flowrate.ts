@@ -6,8 +6,8 @@ export class Flowrate {
         this._kgps = q
         break
       case FlowrateUnits.MTPA:
-        const factor = 86400 * 365.25 * 10 ** -3 * 10 ** -6
-        this._kgps = q * factor
+        const factor = 3.15576
+        this._kgps = q / factor
         break
       default:
         throw new Error('Unit not supported')
@@ -19,8 +19,8 @@ export class Flowrate {
   }
 
   get MTPA() {
-    const factor = 86400 * 365.25e-9
-    return this._kgps / factor
+    const factor = 3.15576
+    return this._kgps * factor
   }
 }
 
