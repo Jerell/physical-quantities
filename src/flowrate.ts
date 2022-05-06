@@ -1,6 +1,9 @@
-export class Flowrate {
+import { PhysicalQuantity } from './physicalQuantity'
+
+export class Flowrate extends PhysicalQuantity {
   private _kgps: number
   constructor(q: number, unit: FlowrateUnits) {
+    super()
     switch (unit) {
       case FlowrateUnits.Kgps:
         this._kgps = q
@@ -25,6 +28,6 @@ export class Flowrate {
 }
 
 export enum FlowrateUnits {
-  Kgps,
-  MTPA,
+  Kgps = 'kg/s',
+  MTPA = 'MTPA',
 }

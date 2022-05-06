@@ -1,7 +1,10 @@
-export class Temperature {
+import { PhysicalQuantity } from './physicalQuantity'
+
+export class Temperature extends PhysicalQuantity {
   private _kelvin: number
 
   constructor(t: number, unit: TemperatureUnits) {
+    super()
     switch (unit) {
       case TemperatureUnits.Celsius:
         this._kelvin = t + 273.15
@@ -24,7 +27,6 @@ export class Temperature {
 }
 
 export enum TemperatureUnits {
-  Kelvin,
-  Celsius,
-  Farenheit,
+  Kelvin = 'K',
+  Celsius = '°C',
 }

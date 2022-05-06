@@ -1,7 +1,10 @@
-export class Pressure {
+import { PhysicalQuantity } from './physicalQuantity'
+
+export class Pressure extends PhysicalQuantity {
   private _pascal: number
 
   constructor(p: number, unit: PressureUnits) {
+    super()
     switch (unit) {
       case PressureUnits.Pascal:
         this._pascal = p
@@ -24,7 +27,6 @@ export class Pressure {
 }
 
 export enum PressureUnits {
-  Pascal,
-  Bara,
-  Barg,
+  Pascal = 'Pa',
+  Bara = 'Bara',
 }
