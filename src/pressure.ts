@@ -2,6 +2,7 @@ import { PhysicalQuantity } from './physicalQuantity'
 
 export class Pressure extends PhysicalQuantity {
   private _pascal: number
+  public type: string = 'pressure'
 
   constructor(p: number, unit: PressureUnits) {
     super()

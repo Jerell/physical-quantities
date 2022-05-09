@@ -20,4 +20,10 @@ describe('Length', () => {
 
     expect(length.m).toBe(0.0254)
   })
+
+  it('should have type length', () => {
+    const length = new Length(1, LengthUnits.in)
+
+    expect(length.type).toBe('length')
+  })
 })

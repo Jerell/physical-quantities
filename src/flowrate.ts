@@ -2,6 +2,8 @@ import { PhysicalQuantity } from './physicalQuantity'
 
 export class Flowrate extends PhysicalQuantity {
   private _kgps: number
+  public type: string = 'flowrate'
+
   constructor(q: number, unit: FlowrateUnits) {
     super()
     switch (unit) {

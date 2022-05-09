@@ -2,6 +2,7 @@ import { PhysicalQuantity } from './physicalQuantity'
 
 export class Temperature extends PhysicalQuantity {
   private _kelvin: number
+  public type: string = 'temperature'
 
   constructor(t: number, unit: TemperatureUnits) {
     super()

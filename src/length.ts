@@ -2,6 +2,7 @@ import { PhysicalQuantity } from './physicalQuantity'
 
 export class Length extends PhysicalQuantity {
   private _m: number
+  public type: string = 'length'
 
   constructor(l: number, unit: LengthUnits) {
     super()

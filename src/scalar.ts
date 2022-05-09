@@ -2,6 +2,7 @@ import { PhysicalQuantity } from './physicalQuantity'
 
 export class Scalar extends PhysicalQuantity {
   private _n: number
+  public type: string = 'scalar'
 
   constructor(n: number, unit: ScalarUnits) {
     super()
