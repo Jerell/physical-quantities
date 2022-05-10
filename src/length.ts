@@ -5,7 +5,7 @@ export class Length extends PhysicalQuantity {
   public type: string = 'length'
 
   constructor(l: number, unit: LengthUnits) {
-    super()
+    super('length')
     switch (unit) {
       case LengthUnits.m:
         this._m = l
@@ -31,6 +31,19 @@ export class Length extends PhysicalQuantity {
 
   get in() {
     return this._m / 0.0254
+  }
+
+  getNumber(unit: string): number {
+    switch (unit) {
+      case LengthUnits.m:
+        return this.m
+      case LengthUnits.mm:
+        return this.mm
+      case LengthUnits.in:
+        return this.in
+      default:
+        return -1
+    }
   }
 }
 

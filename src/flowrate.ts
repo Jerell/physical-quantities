@@ -2,10 +2,9 @@ import { PhysicalQuantity } from './physicalQuantity'
 
 export class Flowrate extends PhysicalQuantity {
   private _kgps: number
-  public type: string = 'flowrate'
 
   constructor(q: number, unit: FlowrateUnits) {
-    super()
+    super('flowrate')
     switch (unit) {
       case FlowrateUnits.Kgps:
         this._kgps = q
@@ -26,6 +25,17 @@ export class Flowrate extends PhysicalQuantity {
   get MTPA() {
     const factor = 0.0315576
     return this._kgps * factor
+  }
+
+  getNumber(unit: string): number {
+    switch (unit) {
+      case FlowrateUnits.Kgps:
+        return this.kgps
+      case FlowrateUnits.MTPA:
+        return this.MTPA
+      default:
+        return -1
+    }
   }
 }
 

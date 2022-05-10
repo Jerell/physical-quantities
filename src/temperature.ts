@@ -2,10 +2,9 @@ import { PhysicalQuantity } from './physicalQuantity'
 
 export class Temperature extends PhysicalQuantity {
   private _kelvin: number
-  public type: string = 'temperature'
 
   constructor(t: number, unit: TemperatureUnits) {
-    super()
+    super('temperature')
     switch (unit) {
       case TemperatureUnits.Celsius:
         this._kelvin = t + 273.15
@@ -18,12 +17,23 @@ export class Temperature extends PhysicalQuantity {
     }
   }
 
-  get celsius() {
+  get celsius(): number {
     return this.kelvin - 273.15
   }
 
-  get kelvin() {
+  get kelvin(): number {
     return this._kelvin
+  }
+
+  getNumber(unit: string): number {
+    switch (unit) {
+      case TemperatureUnits.Kelvin:
+        return this.kelvin
+      case TemperatureUnits.Celsius:
+        return this.celsius
+      default:
+        return -1
+    }
   }
 }
 

@@ -2,10 +2,9 @@ import { PhysicalQuantity } from './physicalQuantity'
 
 export class Scalar extends PhysicalQuantity {
   private _n: number
-  public type: string = 'scalar'
 
   constructor(n: number, unit: ScalarUnits) {
-    super()
+    super('scalar')
     switch (unit) {
       case ScalarUnits.scalar:
         this._n = n
@@ -17,6 +16,15 @@ export class Scalar extends PhysicalQuantity {
 
   get scalar() {
     return this._n
+  }
+
+  getNumber(unit: string): number {
+    switch (unit) {
+      case ScalarUnits.scalar:
+        return this.scalar
+      default:
+        return -1
+    }
   }
 }
 
