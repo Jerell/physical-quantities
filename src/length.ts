@@ -2,10 +2,10 @@ import { PhysicalQuantity } from './physicalQuantity'
 
 export class Length extends PhysicalQuantity {
   private _m: number
-  public type: string = 'length'
 
-  constructor(l: number, unit: LengthUnits) {
+  constructor(l: number, unitString: string) {
     super('length')
+    const unit: LengthUnits = <LengthUnits>unitString
     switch (unit) {
       case LengthUnits.m:
         this._m = l

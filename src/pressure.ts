@@ -3,8 +3,9 @@ import { PhysicalQuantity } from './physicalQuantity'
 export class Pressure extends PhysicalQuantity {
   private _pascal: number
 
-  constructor(p: number, unit: PressureUnits) {
+  constructor(p: number, unitString: string) {
     super('pressure')
+    const unit: PressureUnits = <PressureUnits>unitString
     switch (unit) {
       case PressureUnits.Pascal:
         this._pascal = p

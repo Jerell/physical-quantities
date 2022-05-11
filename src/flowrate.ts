@@ -3,8 +3,9 @@ import { PhysicalQuantity } from './physicalQuantity'
 export class Flowrate extends PhysicalQuantity {
   private _kgps: number
 
-  constructor(q: number, unit: FlowrateUnits) {
+  constructor(q: number, unitString: string) {
     super('flowrate')
+    const unit: FlowrateUnits = <FlowrateUnits>unitString
     switch (unit) {
       case FlowrateUnits.Kgps:
         this._kgps = q
