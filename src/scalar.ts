@@ -5,7 +5,7 @@ export class Scalar extends PhysicalQuantity {
 
   constructor(n: number, unitString: string) {
     super('scalar')
-    const unit: ScalarUnits = <ScalarUnits>unitString
+    const unit: ScalarUnits = unitString as ScalarUnits
     switch (unit) {
       case ScalarUnits.scalar:
         this._n = n

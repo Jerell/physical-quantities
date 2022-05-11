@@ -5,7 +5,7 @@ export class Length extends PhysicalQuantity {
 
   constructor(l: number, unitString: string) {
     super('length')
-    const unit: LengthUnits = <LengthUnits>unitString
+    const unit: LengthUnits = unitString as LengthUnits
     switch (unit) {
       case LengthUnits.m:
         this._m = l
