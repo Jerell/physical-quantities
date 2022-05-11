@@ -1,6 +1,6 @@
 {
   "name": "physical-quantities",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "temperature, pressure, etc.",
   "main": "lib/index.js",
   "types": "lib/index.d.js",
