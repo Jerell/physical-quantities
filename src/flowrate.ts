@@ -41,6 +41,6 @@ export class Flowrate extends PhysicalQuantity {
 }
 
 export enum FlowrateUnits {
-  Kgps = 'kg/s',
   MTPA = 'MTPA',
+  Kgps = 'kg/s',
 }
