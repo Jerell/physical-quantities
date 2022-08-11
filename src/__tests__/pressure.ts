@@ -27,6 +27,6 @@ describe('getNumber', () => {
     const pressure = new Pressure(10, PressureUnits.Pascal)
 
     expect(pressure.getNumber('Pa')).toBe(pressure.pascal)
-    expect(pressure.getNumber('Bara')).toBe(pressure.bara)
+    expect(pressure.getNumber('bara')).toBe(pressure.bara)
   })
 })
