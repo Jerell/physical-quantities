@@ -4,4 +4,8 @@ export class PhysicalQuantity {
   constructor(quantityType: string) {
     this.type = quantityType
   }
+
+   getNumber(unit: string): number {
+    throw new Error('not implemented')
+  }
 }
