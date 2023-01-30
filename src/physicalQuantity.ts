@@ -5,7 +5,5 @@ export abstract class PhysicalQuantity {
     this.type = quantityType
   }
 
-   getNumber(unit: string): number {
-    throw new Error('not implemented')
-  }
+   abstract getNumber(unit: string): number;
 }
