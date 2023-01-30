@@ -1,4 +1,4 @@
-export class PhysicalQuantity {
+export abstract class PhysicalQuantity {
   public type: string
 
   constructor(quantityType: string) {
