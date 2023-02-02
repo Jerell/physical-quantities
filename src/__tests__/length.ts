@@ -26,6 +26,19 @@ describe('Length', () => {
 
     expect(length.m).toBe(0.0254)
   })
+
+
+  it('should create a Length from ft', () => {
+    const length = new Length(1, LengthUnits.ft)
+
+    expect(length.m).toBe(0.3048)
+  })
+
+  it('should convert meters to ft', () => {
+    const length = new Length(1, LengthUnits.m)
+
+    expect(length.ft).toBeCloseTo(3.28084, 4)
+  })
 })
 
 describe('getNumber', () => {
@@ -35,5 +48,6 @@ describe('getNumber', () => {
     expect(length.getNumber('m')).toBe(length.m)
     expect(length.getNumber('mm')).toBe(length.mm)
     expect(length.getNumber('in')).toBe(length.in)
+    expect(length.getNumber('ft')).toBe(length.ft)
   })
 })
