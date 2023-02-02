@@ -20,6 +20,13 @@ describe('pressure', () => {
     expect(pressure.pascal).toBe(100000)
     expect(pressure.bara).toBe(1)
   })
+
+  it('should create a pressure from psi', () => {
+    const pressure = new Pressure(1, PressureUnits.Psi)
+
+    expect(pressure.pascal).toBe(6894.744825494008)
+    expect(pressure.psi).toBe(1)
+  })
 })
 
 describe('getNumber', () => {
@@ -28,5 +35,6 @@ describe('getNumber', () => {
 
     expect(pressure.getNumber('Pa')).toBe(pressure.pascal)
     expect(pressure.getNumber('bara')).toBe(pressure.bara)
+    expect(pressure.getNumber('psi')).toBe(pressure.psi)
   })
 })
