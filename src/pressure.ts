@@ -13,6 +13,9 @@ export class Pressure extends PhysicalQuantity {
       case PressureUnits.Bara:
         this._pascal = p * 1e5
         break
+      case PressureUnits.Psi:
+        this._pascal = p / 0.000145038
+        break
       default:
         throw new Error('Unit not supported')
     }
@@ -26,12 +29,18 @@ export class Pressure extends PhysicalQuantity {
     return this._pascal * 1e-5
   }
 
+  get psi() {
+    return this._pascal * 0.000145038
+  }
+
   getNumber(unit: string): number {
     switch (unit) {
       case PressureUnits.Pascal:
         return this.pascal
       case PressureUnits.Bara:
         return this.bara
+      case PressureUnits.Psi:
+        return this.psi
       default:
         return -1
     }
@@ -41,4 +50,5 @@ export class Pressure extends PhysicalQuantity {
 export enum PressureUnits {
   Pascal = 'Pa',
   Bara = 'bara',
+  Psi = 'psi'
 }

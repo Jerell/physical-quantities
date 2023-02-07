@@ -16,6 +16,9 @@ export class Length extends PhysicalQuantity {
       case LengthUnits.in:
         this._m = l * 0.0254
         break
+      case LengthUnits.ft:
+        this._m = l * 0.3048
+        break
       default:
         throw new Error('Unit not supported')
     }
@@ -32,6 +35,10 @@ export class Length extends PhysicalQuantity {
   get in() {
     return this._m / 0.0254
   }
+  
+  get ft() {
+    return this._m / 0.3048
+  }
 
   getNumber(unit: string): number {
     switch (unit) {
@@ -41,6 +48,8 @@ export class Length extends PhysicalQuantity {
         return this.mm
       case LengthUnits.in:
         return this.in
+      case LengthUnits.ft:
+        return this.ft
       default:
         return -1
     }
@@ -51,4 +60,5 @@ export enum LengthUnits {
   m = 'm',
   mm = 'mm',
   in = 'in',
+  ft = 'ft',
 }
