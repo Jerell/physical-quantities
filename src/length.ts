@@ -35,7 +35,7 @@ export class Length extends PhysicalQuantity {
   get in() {
     return this._m / 0.0254
   }
-  
+
   get ft() {
     return this._m / 0.3048
   }

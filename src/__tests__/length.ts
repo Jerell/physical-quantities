@@ -27,7 +27,6 @@ describe('Length', () => {
     expect(length.m).toBe(0.0254)
   })
 
-
   it('should create a Length from ft', () => {
     const length = new Length(1, LengthUnits.ft)
 

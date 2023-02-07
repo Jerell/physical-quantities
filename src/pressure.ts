@@ -50,5 +50,5 @@ export class Pressure extends PhysicalQuantity {
 export enum PressureUnits {
   Pascal = 'Pa',
   Bara = 'bara',
-  Psi = 'psi'
+  Psi = 'psi',
 }
