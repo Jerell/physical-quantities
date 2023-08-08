@@ -5,3 +5,7 @@ export { Flowrate, FlowrateUnits } from './flowrate'
 export { Length, LengthUnits } from './length'
 export { Scalar, ScalarUnits } from './scalar'
 export { Density, DensityUnits } from './density'
+export {
+  VolumetricFlowrate,
+  VolumetricFlowrateUnits,
+} from './volumetricFlowrate'
