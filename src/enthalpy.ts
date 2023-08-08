@@ -38,6 +38,6 @@ export class Enthalpy extends PhysicalQuantity {
 }
 
 export enum EnthalpyUnits {
-  KJPerKg = 'kj/kg',
-  JPerKg = 'j/kg',
+  KJPerKg = 'kJ/kg',
+  JPerKg = 'J/kg',
 }
