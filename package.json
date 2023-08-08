@@ -1,6 +1,6 @@
 {
   "name": "@paceccs/physical-quantities",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "temperature, pressure, etc.",
   "main": "lib/index.js",
   "types": "lib/index.d.js",
