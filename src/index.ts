@@ -9,3 +9,4 @@ export {
   VolumetricFlowrate,
   VolumetricFlowrateUnits,
 } from './volumetricFlowrate'
+export { Enthalpy, EnthalpyUnits } from './enthalpy'
