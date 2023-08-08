@@ -29,5 +29,5 @@ export class VolumetricFlowrate extends PhysicalQuantity {
 }
 
 export enum VolumetricFlowrateUnits {
-  M3PerS = 'm3PerS',
+  M3PerS = 'm3/s',
 }
