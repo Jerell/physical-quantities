@@ -15,7 +15,7 @@ describe('density', () => {
   })
 
   it('should create a density from lb/ft3', () => {
-    const density = new Density(1, DensityUnits.KgPerM3)
+    const density = new Density(1, DensityUnits.LbPerFt3)
 
     expect(density.LbPerFt3).toBe(1)
     expect(density.KgPerM3).toBe(1 / 16.0185)
