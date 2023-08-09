@@ -3,8 +3,9 @@ import { PhysicalQuantity } from './physicalQuantity'
 export class VolumetricFlowrate extends PhysicalQuantity {
   private _v: number
 
-  constructor(v: number, unit: VolumetricFlowrateUnits) {
+  constructor(v: number, unitString: string) {
     super('volumetricFlowrate')
+    const unit: VolumetricFlowrateUnits = unitString as VolumetricFlowrateUnits
     switch (unit) {
       case VolumetricFlowrateUnits.M3PerS:
         this._v = v

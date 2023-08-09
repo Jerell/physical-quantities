@@ -3,8 +3,9 @@ import { PhysicalQuantity } from './physicalQuantity'
 export class Entropy extends PhysicalQuantity {
   private _jpk: number
 
-  constructor(n: number, unit: EntropyUnits) {
+  constructor(n: number, unitString: string) {
     super('entropy')
+    const unit: EntropyUnits = unitString as EntropyUnits
     switch (unit) {
       case EntropyUnits.JPerK:
         this._jpk = n

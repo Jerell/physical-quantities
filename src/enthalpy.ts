@@ -3,8 +3,9 @@ import { PhysicalQuantity } from './physicalQuantity'
 export class Enthalpy extends PhysicalQuantity {
   private _jpkg: number
 
-  constructor(n: number, unit: EnthalpyUnits) {
+  constructor(n: number, unitString: string) {
     super('enthalpy')
+    const unit: EnthalpyUnits = unitString as EnthalpyUnits
     switch (unit) {
       case EnthalpyUnits.JPerKg:
         this._jpkg = n
