@@ -11,3 +11,5 @@ export {
 } from './volumetricFlowrate'
 export { Enthalpy, EnthalpyUnits } from './enthalpy'
 export { Entropy, EntropyUnits } from './entropy'
+export { Viscosity, ViscosityUnits } from './viscosity'
+export { Phase } from './phase'
