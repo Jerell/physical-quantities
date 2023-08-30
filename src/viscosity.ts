@@ -27,6 +27,8 @@ export class Viscosity extends PhysicalQuantity {
     switch (unit) {
       case ViscosityUnits.Pas:
         return this.Pas
+      case ViscosityUnits.MicroPas:
+        return this.microPas
       default:
         return -1
     }
@@ -35,4 +37,5 @@ export class Viscosity extends PhysicalQuantity {
 
 export enum ViscosityUnits {
   Pas = 'Pa·s',
+  MicroPas = 'Pa·s, 10⁻⁶',
 }
