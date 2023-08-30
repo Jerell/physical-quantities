@@ -19,6 +19,10 @@ export class Viscosity extends PhysicalQuantity {
     return this._pas
   }
 
+  get microPas() {
+    return this._pas / 10 ** -6
+  }
+
   getNumber(unit: string): number {
     switch (unit) {
       case ViscosityUnits.Pas:
