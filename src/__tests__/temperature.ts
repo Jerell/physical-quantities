@@ -1,7 +1,7 @@
 import { Temperature, TemperatureUnits } from '../temperature'
 
 describe('temperature', () => {
-  it('should have type length', () => {
+  it('should have type temperature', () => {
     const temp = new Temperature(1, TemperatureUnits.Kelvin)
 
     expect(temp.type).toBe('temperature')
