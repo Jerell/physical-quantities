@@ -1,19 +1,19 @@
 import { PhysicalQuantity } from './physicalQuantity'
 
-export class ChemicalSubstance extends PhysicalQuantity {
+export class MixtureComponent extends PhysicalQuantity {
   private _molFraction: number
 
   constructor(t: number, unitString: string) {
-    super('chemicalSubstance')
-    const unit: ChemicalSubstanceUnits = unitString as ChemicalSubstanceUnits
+    super('mixtureComponent')
+    const unit: MixtureComponentUnits = unitString as MixtureComponentUnits
     switch (unit) {
-      case ChemicalSubstanceUnits.MolFraction:
+      case MixtureComponentUnits.MolFraction:
         this._molFraction = t
         break
-      case ChemicalSubstanceUnits.Ppm:
+      case MixtureComponentUnits.Ppm:
         this._molFraction = t / 1_000_000
         break
-      case ChemicalSubstanceUnits.Ppb:
+      case MixtureComponentUnits.Ppb:
         this._molFraction = t / 1_000_000_000
         break
       default:
@@ -35,11 +35,11 @@ export class ChemicalSubstance extends PhysicalQuantity {
 
   getNumber(unit: string): number {
     switch (unit) {
-      case ChemicalSubstanceUnits.MolFraction:
+      case MixtureComponentUnits.MolFraction:
         return this.molFraction
-      case ChemicalSubstanceUnits.Ppm:
+      case MixtureComponentUnits.Ppm:
         return this.ppm
-      case ChemicalSubstanceUnits.Ppb:
+      case MixtureComponentUnits.Ppb:
         return this.ppb
       default:
         return -1
@@ -47,7 +47,7 @@ export class ChemicalSubstance extends PhysicalQuantity {
   }
 }
 
-export enum ChemicalSubstanceUnits {
+export enum MixtureComponentUnits {
   MolFraction = 'mol%',
   Ppm = 'ppm',
   Ppb = 'ppb',
