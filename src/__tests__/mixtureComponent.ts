@@ -36,7 +36,7 @@ describe('getNumber', () => {
   it('should return the same values as the unit accessors', () => {
     const cs = new MixtureComponent(5, MixtureComponentUnits.Ppm)
 
-    expect(cs.getNumber('mol%')).toBe(cs.molFraction)
+    expect(cs.getNumber('molFraction')).toBe(cs.molFraction)
     expect(cs.getNumber('ppm')).toBe(cs.ppm)
     expect(cs.getNumber('ppb')).toBe(cs.ppb)
   })

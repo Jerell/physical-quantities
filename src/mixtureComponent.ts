@@ -48,7 +48,7 @@ export class MixtureComponent extends PhysicalQuantity {
 }
 
 export enum MixtureComponentUnits {
-  MolFraction = 'mol%',
+  MolFraction = 'molFraction',
   Ppm = 'ppm',
   Ppb = 'ppb',
 }
